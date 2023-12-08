@@ -1,0 +1,263 @@
+<!-- <p>user-details works!</p>
+{{currentUser | json}} -->
+<div class="container">
+  <mat-card>
+      <mat-card-content>
+        <h2>User Profile</h2>
+        <form [formGroup]="userForm" class="m-3">
+          
+          <mat-form-field>
+            <input matInput formControlName="id" placeholder="ID" value="{{currentUser.id}}" >
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="firstName" placeholder="First Name">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="lastName" placeholder="Last Name">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="maidenName" placeholder="Maiden Name">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="age" placeholder="Age">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="gender" placeholder="Gender">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="email" placeholder="Email">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="phone" placeholder="Phone">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="username" placeholder="Username">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="password" placeholder="Password">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="birthDate" placeholder="Birth Date">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="image" placeholder="Image">
+          </mat-form-field>
+          <div class="example-action-buttons">
+            <button mat-button (click)="accordion.openAll()">Expand All</button>
+            <button mat-button (click)="accordion.closeAll()">Collapse All</button>
+          </div>
+          <mat-accordion class="example-headers-align" multi>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  personal
+                </mat-panel-title>
+                <mat-panel-description>
+                  physical description
+                  <mat-icon>account_circle</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+              <mat-form-field>
+                <input matInput formControlName="bloodGroup" placeholder="Blood Group">
+              </mat-form-field>
+        
+              <mat-form-field>
+                <input matInput formControlName="height" placeholder="Height">
+              </mat-form-field>
+        
+              <mat-form-field>
+                <input matInput formControlName="weight" placeholder="Weight">
+              </mat-form-field>
+        
+              <mat-form-field>
+                  <input matInput formControlName="eyeColor" placeholder="Eye Color">
+                </mat-form-field>
+          
+                <!-- Nested Hair Information -->
+                <div formGroupName="hair">
+                <mat-form-field>
+                  <input matInput formControlName="color" placeholder="Hair Color">
+                </mat-form-field>
+          
+                <mat-form-field>
+                  <input matInput formControlName="type" placeholder="Hair Type">
+                </mat-form-field>
+              </div>
+          
+            </mat-expansion-panel>
+  
+  
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Adress
+                </mat-panel-title>
+                <mat-panel-description>
+                  Home Adress
+                  <mat-icon>map</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+             <!-- Nested Address Information -->
+             <div formGroupName="address">
+              <mat-form-field>
+                <input matInput formControlName="address" placeholder="Address">
+              </mat-form-field>
+        
+              <mat-form-field>
+                <input matInput formControlName="city" placeholder="City">
+              </mat-form-field>
+             <div formGroupName="coordinates">
+              <mat-form-field>
+                <input matInput formControlName="lat" placeholder="Latitude">
+              </mat-form-field>
+        
+              <mat-form-field>
+                <input matInput formControlName="lng" placeholder="Longitude">
+              </mat-form-field>
+             </div>
+              <mat-form-field>
+                <input matInput formControlName="postalCode" placeholder="Postal Code">
+              </mat-form-field>
+    
+        
+              <mat-form-field>
+                <input matInput formControlName="state" placeholder="State">
+              </mat-form-field>
+              </div>
+            </mat-expansion-panel>
+  
+  
+  
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Job
+                </mat-panel-title>
+                <mat-panel-description>
+                  work info
+                  <mat-icon>work</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+              <!-- Nested Company Information -->
+            <div formGroupName="company">
+              <div formGroupName="address">
+            <mat-form-field>
+              <input matInput formControlName="address" placeholder="Company Address">
+            </mat-form-field>
+      
+            <mat-form-field>
+              <input matInput formControlName="city" placeholder="Company City">
+            </mat-form-field>
+       <div formGroupName="coordinates">
+            <mat-form-field>
+              <input matInput formControlName="lat" placeholder="Company Latitude">
+            </mat-form-field>
+      
+            <mat-form-field>
+              <input matInput formControlName="lng" placeholder="Company Longitude">
+            </mat-form-field>
+          </div>
+            <mat-form-field>
+              <input matInput formControlName="postalCode" placeholder="Company Postal Code">
+            </mat-form-field>
+      
+            <mat-form-field>
+              <input matInput formControlName="state" placeholder="Company State">
+            </mat-form-field>
+            </div>
+            <mat-form-field>
+              <input matInput formControlName="department" placeholder="Department">
+            </mat-form-field>
+      
+            <mat-form-field>
+              <input matInput formControlName="name" placeholder="Company Name">
+            </mat-form-field>
+      
+            <mat-form-field>
+              <input matInput formControlName="title" placeholder="Title">
+            </mat-form-field>
+            </div>
+          
+            </mat-expansion-panel>
+  
+  
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Bank 
+                </mat-panel-title>
+                <mat-panel-description>
+                  Account info
+                  <mat-icon>credit_card</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+              <!-- Bank Information -->
+            <div formGroupName="bank">
+              <mat-form-field>
+                <input matInput formControlName="cardExpire" placeholder="Card Expiry Date">
+              </mat-form-field>
+        
+              <mat-form-field>
+                <input matInput formControlName="cardNumber" placeholder="Card Number">
+              </mat-form-field>
+        
+              <mat-form-field>
+                <input matInput formControlName="cardType" placeholder="Card Type">
+              </mat-form-field>
+        
+              <mat-form-field>
+                <input matInput formControlName="currency" placeholder="Currency">
+              </mat-form-field>
+        
+              <mat-form-field>
+                <input matInput formControlName="iban" placeholder="IBAN">
+              </mat-form-field>
+            </div>
+          
+            </mat-expansion-panel>
+          </mat-accordion>
+           <!-- Other Fields (ein, ssn, userAgent, etc.) -->
+      
+           <mat-form-field>
+            <input matInput formControlName="ein" placeholder="EIN">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="ssn" placeholder="SSN">
+          </mat-form-field>
+    
+          <mat-form-field>
+            <input matInput formControlName="userAgent" placeholder="User Agent">
+          </mat-form-field>
+          <!-- <div class="example-button-container">
+            <button mat-fab color="primary" aria-label="FAB">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </div> -->
+          <div class="example-button-container">
+            <button mat-fab color="primary" aria-label="FAB" (click)="toggleForm()">
+              <mat-icon>{{ isEdit ? 'save' : 'edit' }}</mat-icon>
+            </button>
+          </div>
+          
+        </form>
+      </mat-card-content>
+    </mat-card>
+    
+  </div>
+  
+  

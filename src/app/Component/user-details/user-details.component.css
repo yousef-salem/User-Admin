@@ -1,0 +1,17 @@
+.example-action-buttons {
+    padding-bottom: 20px;
+  }
+  
+  .example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .example-headers-align .mat-mdc-form-field + .mat-mdc-form-field , form .mat-mdc-form-field {
+    margin: 8px;
+  }
+  .example-button-container {
+    position: fixed;
+    bottom: 20px; /* Adjust this value as needed to control the distance from the bottom */
+    right: 30px;  /* Adjust this value as needed to control the distance from the right */
+  }
