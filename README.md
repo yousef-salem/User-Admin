@@ -1,4 +1,10 @@
-# Table
+# Users-Admin
+ Front-end Project using angular16 (ts)
+This project is a  Front-end application developed using angular16 . 
+The primary purpose of this application is to provide Gui to manipulate one etity by CRUD operations as complete front-end project.
+and the Back-end project in Users repo in same github account
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
 
